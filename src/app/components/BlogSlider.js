@@ -65,7 +65,7 @@ const BlogSlider = ({ title = "Mindful Nutrition: Our Blogs", blogs = [] }) => {
             </div>
 
             {/* Read More Button */}
-            <button className="bg-[#4B6F00] hover:bg-[#4c6e07] cursor-pointer  py-3 px-12 text-white  inline-block mt-8">
+            <button className=" bg-[#567f08]  hover:bg-[#4c6e07] cursor-pointer  py-3 px-12 text-white  inline-block mt-8">
                 Read More
             </button>
         </section>

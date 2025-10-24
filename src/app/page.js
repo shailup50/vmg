@@ -162,7 +162,7 @@ export default function Home() {
 
         <ProductSlider slidesData={slidesData} />
         <div className="max-w-7xl  mx-auto px-5 2xl:px-0 text-center py-6 md:pt-6 pt-0 ">
-          <Link href="#" className="bg-[#4B6F00] hover:bg-[#4c6e07]  py-3 px-12 text-white mt-1 inline-block">View Details</Link>
+          <Link href="#" className=" bg-[#567f08]  hover:bg-[#4c6e07]  py-3 px-12 text-white mt-1 inline-block">View Details</Link>
         </div>
       </section>
       <Future

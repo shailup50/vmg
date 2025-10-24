@@ -18,8 +18,8 @@ const Footer = () => {
             phone: "+91-1234567890",
             address: " ",
             socialLinks: [
-                { icon: <AiFillInstagram />, href: "https://www.instagram.com/vmgpharma", label: "Instagram" },
-                { icon: <MdOutlineFacebook />, href: "https://www.facebook.com/vmgpharma", label: "Facebook" },
+                { icon: <AiFillInstagram />, href: "#", label: "Instagram" },
+                { icon: <MdOutlineFacebook />, href: "#", label: "Facebook" },
             ],
         },
         columns: [

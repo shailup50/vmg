@@ -43,12 +43,12 @@ export default function HomeSlider() {
 
     return (
         <Swiper
-            // modules={[Autoplay]}
+            modules={[Autoplay]}
             spaceBetween={0}
             slidesPerView={1}
             loop={true}
             autoplay={{
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
             }}>
             {slides.map((slide, index) => (

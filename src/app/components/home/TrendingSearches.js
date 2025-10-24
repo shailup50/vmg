@@ -7,7 +7,7 @@ const TrendingSearches = ({ items, heading }) => {
             {items.map((item, index) => (
                 <div
                     key={index}
-                    className={`px-6 py-3 md:text-base text-[15px] text-center w-[45%] md:w-[200px] lg:shrink-0 lg:w-[18%] border cursor-pointer transition-all hover:bg-[#97D2F3] ${index === 0 ? 'bg-[#97D2F3] text-black' : 'bg-white text-black'}`}
+                    className={`px-6 py-3 md:text-base text-[15px] text-center w-[45%] md:w-[200px] lg:shrink-0 lg:w-[18%] border cursor-pointer transition-all hover:bg-[#97D2F3] ${index === 20 ? 'bg-[#97D2F3] text-black' : 'bg-white text-black'}`}
                 >
                     {item}
                 </div>
