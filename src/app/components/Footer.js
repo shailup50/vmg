@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
-import { MdOutlineFacebook } from "react-icons/md";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
-import { AiFillInstagram } from "react-icons/ai";
 
 
 import Link from "next/link";
@@ -11,51 +13,49 @@ import Image from "next/image";
 
 const Footer = () => {
 
-    const footerData = {
-        contact: {
-            logo: logo,
-            email: "INFO@VMGPHARMA.COM",
-            phone: "+91-1234567890",
-            address: " ",
-            socialLinks: [
-                { icon: <AiFillInstagram />, href: "#", label: "Instagram" },
-                { icon: <MdOutlineFacebook />, href: "#", label: "Facebook" },
-            ],
+    const shopLinks = [
+        { name: "Shop All", url: "/shop" },
+        { name: "Vigorzen", url: "/vigorzen" },
+        { name: "ExtraCard", url: "/extracard" },
+        { name: "WelFusion", url: "/welfusion" },
+    ];
+
+    const companyLinks = [
+        { name: "About Us", url: "/about-us" },
+        { name: "Our Story", url: "/our-story" },
+        { name: "Quality Standards", url: "/quality-standards" },
+        { name: "Blogs", url: "/blogs" },
+    ];
+
+    const supportLinks = [
+        { name: "Shipping & Returns", url: "/shipping-returns" },
+        { name: "Privacy Policy", url: "/privacy-policy" },
+        { name: "Terms & Conditions", url: "/terms-conditions" },
+    ];
+
+    const contactInfo = [
+        { icon: <FaPhoneAlt className="text-[#5B8109] text-lg" />, text: "+91-1234567890" },
+        { icon: <MdEmail className="text-[#5B8109] text-lg" />, text: "Info@Vmgpharma.com" },
+        {
+            icon: <MdLocationOn className="text-[#5B8109] mt-1 text-xl" />,
+            text: "2972 Westheimer Rd. Santa Ana, Illinois 85486",
         },
-        columns: [
-            {
-                title: "SHOP",
-                links: [
-                    { label: "SHOP ALL", href: "/shop" },
-                    { label: "VIGORZEN", href: "/products/vigorzen" },
-                    { label: "EXTRACARD", href: "/products/extracard" },
-                    { label: "WELFUSION", href: "/products/welfusion" },
-                ],
-            },
-            {
-                title: "COMPANY",
-                links: [
-                    { label: "ABOUT US", href: "/about" },
-                    { label: "OUR STORY", href: "/our-story" },
-                    { label: "QUALITY STANDARDS", href: "/quality-standards" },
-                    { label: "BLOGS", href: "/blogs" },
-                ],
-            },
-            {
-                title: "SUPPORT",
-                links: [
-                    { label: "SHIPPING & RETURNS", href: "/shipping-returns" },
-                    { label: "PRIVACY POLICY", href: "/privacy-policy" },
-                    { label: "TERMS & CONDITIONS", href: "/terms" },
-                ],
-            },
-        ],
-        disclaimer:
-            'Disclaimer: "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."',
-    };
+    ];
+
+    const socialLinks = [
+        { icon: <FaFacebookF />, url: "https://facebook.com" },
+        { icon: <FaTwitter />, url: "https://twitter.com" },
+        { icon: <FaLinkedinIn />, url: "https://linkedin.com" },
+        { icon: <FaInstagram />, url: "https://instagram.com" },
+    ];
+
+    const description = "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development."
+
+    const disclaimer = 'Disclaimer: "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."'
 
     return (
-        <footer className="bg-[#EAF4D6] text-[#1a1a1a] md:pt-0 pt-10">
+        <>
+            {/* <footer className="bg-[#EAF4D6] text-[#1a1a1a] md:pt-0 pt-10">
             <div className="max-w-7xl mx-auto  px-5 2xl:px-0  flex flex-wrap md:grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8   border-[#cbd5b7]  sm:divide-x divide-[#cbd5b7]">
 
 
@@ -119,7 +119,102 @@ const Footer = () => {
             <div className="  border-[#cbd5b7] text-center text-xs text-black py-4 px-4">
                 {footerData.disclaimer}
             </div>
-        </footer>
+        </footer> */}
+
+            <footer className="w-full bg-white py-10 md:py-14">
+                <div className="max-w-7xl mx-auto px-6 flex xl:flex-nowrap flex-wrap gap-6 md:gap-10 text-sm">
+
+                    {/* LOGO + DESCRIPTION */}
+                    <div className="md:w-[25%]">
+                        <Image
+                            src={logo}
+                            alt="VMG Logo"
+                            width={120}
+                            height={50}
+                            className="object-contain"
+                        />
+                        <p className="text-black mt-4">
+                            {description}
+                        </p>
+                    </div>
+
+                    <div className="  md:w-[20%] flex gap-4 md:gap-10">
+                        <div className="min-w-[65%] md:min-w-auto">
+                            <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">SHOP</h3>
+                            <ul className="space-y-2 md:space-y-3 text-gray-600">
+                                {shopLinks.map((item, i) => (
+                                    <li key={i}>
+                                        <Link href={item.url} className="hover:text-[#78934A] transition text-black">
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="min-w-[60%] md:min-w-auto">
+                            <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">COMPANY</h3>
+                            <ul className="space-y-2 md:space-y-3 text-gray-600">
+                                {companyLinks.map((item, i) => (
+                                    <li key={i}>
+                                        <Link href={item.url} className="hover:text-[#78934A] transition text-black">
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-5  md:gap-10 md:w-[35%]">
+                        <div className="min-w-[40%]  md:min-w-[40%]">
+                            <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">SUPPORT</h3>
+                            <ul className="space-y-2 md:space-y-3 text-gray-600">
+                                {supportLinks.map((item, i) => (
+                                    <li key={i}>
+                                        <Link href={item.url} className="hover:text-[#78934A] transition text-black">
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+
+                        <div className="min-w-[60%] md:min-w-[50%]">
+                            <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">CONTACT</h3>
+                            <ul className="space-y-2 md:space-y-3 text-gray-600">
+                                {contactInfo.map((item, i) => (
+                                    <li key={i} className="flex gap-2 items-start text-black">
+                                        <span className="min-w-5">{item.icon}</span> <span>{item.text}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">SOCIAL MEDIA</h3>
+                        <div className="flex items-center gap-4 text-[#5B8109] text-lg">
+                            {socialLinks.map((item, i) => (
+                                <Link key={i} href={item.url} target="_blank" className="hover:scale-110 transition">
+                                    {item.icon}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <main className="bg-[#78934A] text-white py-3">
+                <div className="max-w-7xl mx-auto text-center px-5 2xl:px-0">
+                    <p className="text-[10px] md:text-[12px] font-light ">{disclaimer}</p>
+                </div>
+            </main>
+
+
+        </>
     );
 };
 

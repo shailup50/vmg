@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const CommitmentItem = ({ icon, title, content }) => {
     return (
@@ -29,9 +30,21 @@ const ApproachSection = ({
     imageSrc,
 }) => {
     return (
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-5 2xl:px-0 py-6 md:py-10 gap-8">
-            {/* Left Content */}
-            <div className="md:w-1/2 md:order-0 order-2">
+        <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-5 2xl:px-0 py-6 md:py-10 gap-8"
+        >
+
+            <motion.div
+                initial={{ opacity: 0, x: -25 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: false }}
+                className="md:w-1/2 md:order-0 order-2"
+            >
                 <h2
                     className="text-[#4B6F00] text-2xl md:text-3xl font-semibold mb-4"
                     dangerouslySetInnerHTML={{ __html: heading }}
@@ -44,22 +57,45 @@ const ApproachSection = ({
                     className="font-semibold text-lg text-black mb-4 md:mb-6"
                     dangerouslySetInnerHTML={{ __html: subHeading }}
                 />
-                {commitments?.map((item, index) => (
-                    <CommitmentItem key={index} {...item} />
-                ))}
-            </div>
 
-            {/* Right Image */}
-            <div className="md:w-1/2 md:order-0 order-1">
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    transition={{ staggerChildren: 0.15 }}
+                    viewport={{ once: false }}
+                >
+                    {commitments?.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            variants={{
+                                hidden: { opacity: 0, y: 15 },
+                                show: { opacity: 1, y: 0 },
+                            }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <CommitmentItem {...item} />
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, x: 25 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: false }}
+                className="md:w-1/2 md:order-0 order-1"
+            >
                 <Image
                     src={imageSrc}
                     alt="Our Approach Image"
                     width={800}
                     height={400}
-                    className=" shadow-sm w-full min-w-full"
+                    className="shadow-sm w-full min-w-full"
                 />
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 

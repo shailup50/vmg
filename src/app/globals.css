@@ -15,6 +15,11 @@ body,
   font-family: var(--font-sans);
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
 .font2 {
   font-family: var(--second-font);
 }
@@ -47,7 +52,14 @@ body .outer_arrow {
 
 }
 
+.left_auto {
+  margin-left: auto;
+}
 
+.icon_circle {
+  width: 6rem;
+  height: 6rem;
+}
 
 @media (min-width:1024px) {
   .slider_3d .swiper-slide-next {
@@ -55,5 +67,12 @@ body .outer_arrow {
     margin-top: -6px;
     transform: scale(1.2) !important;
     z-index: 99;
+  }
+}
+
+
+@media (max-width:767px) {
+  .left_auto {
+    margin-left: 0;
   }
 }

@@ -1,4 +1,6 @@
+"use client"
 import Image from "next/image";
+import { motion } from "framer-motion";
 import ApproachSection from "@/app/components/home/ApproachSection";
 import apporchimg from "@/app/images/home/approach.webp"
 import icon1 from "@/app/images/home/quality.svg"
@@ -156,14 +158,58 @@ export default function Home() {
 
       <section className="bg-[#F2F5EC] py-6 md:py-8 overflow-hidden ">
         <div className="max-w-7xl  mx-auto px-5 2xl:px-0 ">
-          <h2 className="text-lg md:text-xl text-center my-3 font-semibold">The Starting Three</h2>
-          <p className="text-center mb-8 text-[15px] text-sm mx-auto md:w-[40%]">Meet the first three products in our range, each crafted to address a specific aspect of your health.</p>
+          <motion.h2
+            className="text-lg md:text-xl text-center my-3 font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            The Starting Three
+          </motion.h2>
+
+          <motion.p
+            className="text-center mb-8 text-[15px] mx-auto md:w-[40%]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Meet the first three products in our range, each crafted to address a
+            specific aspect of your health.
+          </motion.p>
         </div>
 
-        <ProductSlider slidesData={slidesData} />
-        <div className="max-w-7xl  mx-auto px-5 2xl:px-0 text-center py-6 md:pt-6 pt-0 ">
-          <Link href="#" className=" bg-[#567f08]  hover:bg-[#4c6e07]  py-3 px-12 text-white mt-1 inline-block">View Details</Link>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <ProductSlider slidesData={slidesData} />
+        </motion.div>
+
+        <motion.div
+          className="max-w-7xl mx-auto px-5 2xl:px-0 text-center py-6 md:pt-6 pt-0"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: false }}
+        >
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: false }}
+          >
+            <Link
+              href="#"
+              className="bg-[#567f08] hover:bg-[#4c6e07] py-3 px-12 text-white mt-1 inline-block"
+            >
+              View Details
+            </Link>
+          </motion.div>
+        </motion.div>
       </section>
       <Future
         heading="The Future of Wellness, Coming Soon"

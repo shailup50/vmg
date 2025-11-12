@@ -38,7 +38,7 @@ const Faqs = ({ faqData }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const handleToggle = (index) => {
-        // If the clicked section is already open, close it; otherwise open the new one
+
         setActiveIndex(activeIndex === index ? null : index);
     };
 
