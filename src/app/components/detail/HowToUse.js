@@ -20,7 +20,7 @@ export default function HowToUse({ title = "How to Use", steps = [], image }) {
                                 Step {index + 1}
                             </div>
 
-                            <div className="text-black relative -z-10  -ml-10 py-4 md:py-8 px-8 md:px-12 pl-16! bg-[#FAFCFF] leading-relaxed border-2 border-[#CBE6FF] rounded-2xl">
+                            <div className="text-black relative -z-10 w-full -ml-10 py-4 md:py-8 px-8 md:px-12 pl-16! bg-[#FAFCFF] leading-relaxed border-2 border-[#CBE6FF] rounded-2xl">
                                 <p className="font-normal md:text-base text-sm" dangerouslySetInnerHTML={{ __html: step.info }} />
 
                             </div>

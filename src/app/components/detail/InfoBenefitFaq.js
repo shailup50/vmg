@@ -102,7 +102,7 @@ export const Benefit = () => {
 
     const stepsData = [
         {
-            info: `<b>Preventive –</b> One Tablet, Once a Day <br> <b>Preventive –</b> One Tablet, Once a Day Or as directed by your healthcare professional`,
+            info: `<b>Preventive –</b> One Tablet, Once a Day <br> <b>Preventive –</b> One Tablet, Twice a Day <br>Or as directed by your healthcare professional`,
 
         },
         {
@@ -114,7 +114,7 @@ export const Benefit = () => {
     const idealData = [
         {
             icon: who1,
-            text: "IndividuPeople experiencing joint stiffness, knee pain, or reduced flexibility",
+            text: "People experiencing joint stiffness, knee pain, or reduced flexibility",
         },
         {
             icon: who2,
