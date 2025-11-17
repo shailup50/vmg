@@ -11,6 +11,9 @@ import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import AnimatedButton from '../AnimatedButton';
 import BestSellingProducts from './BestSellingProducts';
 import product1 from "@/app/images/product/product1.webp"
+import product2 from "@/app/images/product/product2.webp"
+import product3 from "@/app/images/product/product3.webp"
+
 
 
 export const Banner = ({
@@ -85,7 +88,8 @@ export const Product = () => {
             desc:
                 "Collagen peptide, Glucosomine sulfate, Ginger, Rosehip extract, multivitamin & multimineral tablets",
             image: product1,
-            rating: 4
+            rating: 4,
+            url: "/product-details"
         },
         {
             title: "Extracard",
@@ -93,17 +97,9 @@ export const Product = () => {
             oldPrice: 899,
             desc:
                 "Co-Enzyme Q10, Omega 3, Green tea, Grape seed, Lycopene tablets",
-            image: product1,
-            rating: 5
-        },
-        {
-            title: "Welfusion",
-            price: 700,
-            oldPrice: 899,
-            desc:
-                "Co-Enzyme Q10, Beta carotene, Multivitamin & mineral tablets",
-            image: product1,
-            rating: 5
+            image: product2,
+            rating: 5,
+            url: "#"
 
         },
         {
@@ -112,8 +108,22 @@ export const Product = () => {
             oldPrice: 899,
             desc:
                 "Co-Enzyme Q10, Beta carotene, Multivitamin & mineral tablets",
-            image: product1,
-            rating: 3
+            image: product3,
+            rating: 5,
+            url: "#"
+
+
+        },
+        {
+            title: "Welfusion",
+            price: 700,
+            oldPrice: 899,
+            desc:
+                "Co-Enzyme Q10, Beta carotene, Multivitamin & mineral tablets",
+            image: product3,
+            rating: 3,
+            url: "#"
+
 
         },
     ];

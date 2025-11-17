@@ -3,20 +3,20 @@ import Image from "next/image";
 
 export default function IdealFor({
     title = "Who It’s For",
-    subtitle = "Extracard Is Ideal For:",
+    subtitle = "",
     image,
     data = [],
 }) {
     if (!data || data.length === 0) return null;
 
     return (
-        <section className="bg-[#F2F9E6]">
+        <section className="bg-[#F2F9E6] ">
             <div className="max-w-7xl mx-auto px-5 2xl:px-0 py-10 md:py-14 bg-[#F2F9E6]">
 
 
                 <div className="flex flex-col md:flex-row items-end gap-12">
                     {/* LEFT IMAGE */}
-                    <div className="w-full md:w-1/2">
+                    <div className="w-full md:w-[40%]">
                         <h2 className="text-2xl md:text-3xl font-medium mb-2 md:text-left text-center" >{title}</h2>
                         <p className="text-black mb-10 md:text-left text-center">{subtitle}</p>
                         {image && (
@@ -25,13 +25,13 @@ export default function IdealFor({
                                 alt="who it's for"
                                 width={600}
                                 height={400}
-                                className="rounded-xl rounded-tr-4xl object-cover w-full"
+                                className="rounded-xl rounded-tr-4xl object-cover w-full "
                             />
                         )}
                     </div>
 
                     {/* RIGHT CONTENT */}
-                    <div className="w-full md:w-1/2 flex flex-col space-y-0">
+                    <div className="w-full md:w-1/2 flex flex-col space-y-0 ">
                         {data.map((item, index) => (
                             <div key={index} className="flex items-start gap-4 relative">
 

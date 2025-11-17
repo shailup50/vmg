@@ -21,14 +21,15 @@ import do2 from "@/app/images/info/do2.svg"
 import do3 from "@/app/images/info/do3.svg"
 import do4 from "@/app/images/info/do4.svg"
 import HowToUse from './HowToUse';
-import howImg from "@/app/images/info/how.webp"
+import howImg from "@/app/images/info/how1.webp"
 import IdealFor from './IdealFor';
 import whoImg from "@/app/images/info/who.webp"
-import who1 from "@/app/images/info/who1.svg"
-import who2 from "@/app/images/info/who2.svg"
-import who3 from "@/app/images/info/who3.svg"
-import who4 from "@/app/images/info/who4.svg"
+import who1 from "@/app/images/info/in1.svg"
+import who2 from "@/app/images/info/in2.svg"
+import who3 from "@/app/images/info/in3.svg"
+import who4 from "@/app/images/info/in4.svg"
 import FaqSection from './FaqSection';
+import intImg from "@/app/images/info/intend.webp"
 
 
 
@@ -101,11 +102,11 @@ export const Benefit = () => {
 
     const stepsData = [
         {
-            info: `Take <b>1 capsule per day, preferably with a meal</b> or as recommended by your healthcare professional.`,
+            info: `<b>Preventive –</b> One Tablet, Once a Day <br> <b>Preventive –</b> One Tablet, Once a Day Or as directed by your healthcare professional`,
 
         },
         {
-            info: `<b>For best results, combine with a balanced diet and active lifestyle.</b>`,
+            info: `<b>Consistency is key</b> <br> use for at least 8–12 weeks for visible improvement in mobility and comfort.`,
 
         }
     ];
@@ -113,34 +114,34 @@ export const Benefit = () => {
     const idealData = [
         {
             icon: who1,
-            text: "Individuals managing cholesterol or heart health concerns.",
+            text: "IndividuPeople experiencing joint stiffness, knee pain, or reduced flexibility",
         },
         {
             icon: who2,
-            text: "Professionals experiencing daily fatigue or low stamina.",
+            text: "Fitness enthusiasts & athletes seeking faster recovery",
         },
         {
             icon: who3,
-            text: "Fitness enthusiasts seeking endurance and recovery support.",
+            text: "Individuals looking to strengthen bones, ligaments, and skin elasticity",
         },
         {
             icon: who4,
-            text: "Anyone looking for everyday vitality and cell protection.",
+            text: "People experiencing joint stiffness, knee pain, or reduced flexibility",
         },
     ];
 
     return (
         <>
-            <WhatItDoes items={whatItDoesData} />
+            {/* <WhatItDoes items={whatItDoesData} /> */}
             <HowToUse
                 title="How to Use"
                 steps={stepsData}
                 image={howImg}
             />
             <IdealFor
-                title="Who It’s For"
-                subtitle="Extracard Is Ideal For:"
-                image={whoImg}
+                title="Intended for"
+                // subtitle="Extracard Is Ideal For:"
+                image={intImg}
                 data={idealData}
             />
         </>

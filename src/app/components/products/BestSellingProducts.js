@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import { FaStar, FaRegStar, FaCheckCircle } from "react-icons/fa";
+import Link from "next/link";
 
 export default function BestSellingProducts({ products = [] }) {
     return (
@@ -85,7 +86,8 @@ function ProductCard({
     oldPrice,
     desc,
     image,
-    rating = 5
+    rating = 5,
+    url
 }) {
     const [qty, setQty] = useState(1);
 
@@ -185,9 +187,9 @@ function ProductCard({
                 </button>
             </div>
 
-            <button className="w-full mt-4 bg-[#5B8109] text-white rounded-full py-3 font-medium hover:bg-green-800 transition">
+            <Link href={url} className="w-full block text-center mt-4 bg-[#5B8109] text-white rounded-full py-3 font-medium hover:bg-green-800 transition">
                 BUY NOW
-            </button>
+            </Link>
         </div>
     );
 }
