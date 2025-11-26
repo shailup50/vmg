@@ -132,7 +132,7 @@ export const Benefit = () => {
 
     return (
         <>
-            {/* <WhatItDoes items={whatItDoesData} /> */}
+            <WhatItDoes items={whatItDoesData} />
             <HowToUse
                 title="How to Use"
                 steps={stepsData}
@@ -140,7 +140,7 @@ export const Benefit = () => {
             />
             <IdealFor
                 title="Intended for"
-                // subtitle="Extracard Is Ideal For:"
+                subtitle="Extracard Is Ideal For:"
                 image={intImg}
                 data={idealData}
             />
