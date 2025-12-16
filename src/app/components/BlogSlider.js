@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 
+
 const BlogSlider = ({ title = "Mindful Nutrition: Our Blogs", blogs = [] }) => {
     const [swiperRef, setSwiperRef] = useState(null);
 
