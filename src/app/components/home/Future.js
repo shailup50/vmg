@@ -34,7 +34,7 @@ export const Future = ({ heading, description, btnName, btnLink, img }) => {
                     >
                         <Link
                             href={btnLink}
-                            className="mt-4 border-2 bg-transparent border-[#4B6F00] text-[4B6F00]
+                            className="mt-4 rounded-full border-2 font-medium bg-transparent border-[#4B6F00] text-[#4B6F00]
                         py-3 md:py-4 px-6 md:px-10 hover:bg-[#4B6F00] hover:text-white transition"
                         >
                             {btnName}

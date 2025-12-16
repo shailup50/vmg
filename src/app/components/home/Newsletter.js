@@ -63,11 +63,11 @@ export default function Newsletter({
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder={placeholder}
-                        className="w-full sm:w-2/3 border border-black py-2 md:py-3 px-4 text-black focus:outline-none"
+                        className="w-full sm:w-2/3 border rounded-tl-full rounded-bl-full border-black py-2 md:py-3 px-4 text-black focus:outline-none"
                     />
                     <button
                         type="submit"
-                        className="w-[200px] sm:w-auto bg-transparent cursor-pointer border border-s-0 text-black border-black py-2 md:py-3 px-4 hover:bg-[#567f08] hover:text-white transition-colors"
+                        className="w-[200px] sm:w-auto rounded-tr-full rounded-br-full bg-transparent cursor-pointer border border-s-0 text-black border-black py-2 md:py-3 px-4 hover:bg-[#567f08] hover:text-white transition-colors"
                     >
                         {buttonText}
                     </button>

@@ -2,6 +2,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import AnimatedButton from "../AnimatedButton";
 
 export default function HeroSlide({
     imageSrc,
@@ -11,7 +12,9 @@ export default function HeroSlide({
     buttonText,
     alignment = "left",
     maxWidth = "max-w-3xl",
-    position = "center"
+    position = "center",
+    text,
+    href = "#"
 }) {
     const alignmentClasses = {
         left: "items-start text-left",
@@ -84,13 +87,14 @@ export default function HeroSlide({
                         </motion.p>
                     )}
 
-                    <motion.button
+                    {/* <motion.button
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 250 }}
-                        className="bg-[#5B8109] hover:bg-[#4B6F00] lg:text-base text-[15px] py-3 px-7 lg:px-12 text-white mt-1 inline-block"
+                        className="bg-[#5B8109] hover:bg-[#4B6F00] rounded-full lg:text-base text-[15px] py-3 px-7 lg:px-12 text-white mt-1 inline-block"
                     >
                         {buttonText}
-                    </motion.button>
+                    </motion.button> */}
+                    <AnimatedButton text={text} href={href} />
                 </div>
             </motion.div>
         </motion.div>

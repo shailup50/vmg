@@ -204,7 +204,7 @@ export default function Home() {
           >
             <Link
               href="#"
-              className="bg-[#567f08] hover:bg-[#4c6e07] py-3 px-12 text-white mt-1 inline-block"
+              className="bg-[#567f08] rounded-full hover:bg-[#4c6e07] py-3 px-12 text-white mt-1 inline-block"
             >
               View Details
             </Link>
