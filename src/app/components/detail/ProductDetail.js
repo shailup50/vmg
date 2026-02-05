@@ -14,6 +14,11 @@ import "swiper/css/thumbs";
 import { ImLocation } from "react-icons/im";
 import { SlArrowRight } from "react-icons/sl";
 
+import flipcart from "@/app/images/flipkart-logo.svg"
+import amazon from "@/app/images/amazon-logo.svg"
+import mg from "@/app/images/1mg-logo.svg"
+import Link from "next/link";
+
 
 
 export default function ProductDetail({ product }) {
@@ -46,12 +51,12 @@ export default function ProductDetail({ product }) {
             <div>
                 <Swiper
                     spaceBetween={10}
-                    navigation={false}
-                    autoplay={{ delay: 4000 }}
+                    navigation={true}
+                    autoplay={{ delay: 8000 }}
                     modules={[Navigation, Thumbs, Autoplay]}
                     thumbs={{ swiper: thumbs }}
 
-                    className="rounded-lg overflow-hidden"
+                    className="rounded-lg overflow-hidden arrow_circle"
                 >
                     {product.images.map((img, i) => (
                         <SwiperSlide key={i}>
@@ -104,6 +109,13 @@ export default function ProductDetail({ product }) {
                 <h3 className="text-base md:text-[17px] text-black font-medium">{product.descriptionTitle}</h3>
 
                 <p className="text-gray-600 leading-relaxed whitespace-pre-line -mt-2 text-[15px]" dangerouslySetInnerHTML={{ __html: product.description }} />
+
+                {/* <h3 className="text-black mt-6 mb-3 text-base font-medium">Also Available on</h3>
+                <div className="flex gap-4 mb-8 items-center">
+                    <Link href="https://www.flipkart.com/" target="_blank"> <Image src={flipcart} alt="flipcart" className="w-7 object-contain" /></Link>
+                    <Link href="https://www.amazon.in/" target="_blank"><Image src={amazon} alt="amazon" className="w-8 object-contain" /></Link>
+                    <Link href="https://www.1mg.com/" target="_blank"><Image src={mg} alt="1mg" className="w-10 object-contain" /></Link>
+                </div> */}
 
 
                 {/* Ingredients */}

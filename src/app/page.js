@@ -24,6 +24,9 @@ import BlogSlider from "./components/BlogSlider";
 import blog1 from "@/app/images/home/blog1.webp"
 import Faqs from "./components/Faqs";
 import bottomImg from "@/app/images/home/bottom.webp"
+import BestSellerSlider from "./components/home/BestSellerSlider";
+import { bestSellerData } from "./data/bestSellerData";
+
 
 
 
@@ -218,6 +221,7 @@ export default function Home() {
         btnLink="#"
         img={bgimg}
       />
+      <BestSellerSlider data={bestSellerData} />
 
       <Newsletter
         title="Get Your Daily Dose of Wellness"

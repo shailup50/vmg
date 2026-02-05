@@ -146,3 +146,82 @@ body .outer_arrow {
     font-size: 17px;
   }
 }
+
+
+.arrow_circle .swiper-button-next,
+.arrow_circle .swiper-button-prev {
+  background: #2AA2DE;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s;
+
+}
+
+.arrow_circle .swiper-button-next svg,
+.arrow_circle .swiper-button-prev svg {
+  color: #fff;
+  width: 14px;
+
+}
+
+body .home_slider .swiper-button-prev {
+  left: 46%;
+  bottom: 2rem;
+  top: auto !important;
+}
+
+body .home_slider .swiper-button-next {
+  right: 46%;
+  bottom: 2rem;
+  top: auto !important;
+}
+
+.arrow_circle .swiper-button-next:hover,
+.arrow_circle .swiper-button-prev:hover {
+  background: #567f08 !important;
+}
+
+
+@media (max-width:1200px) {
+  body .home_slider .swiper-button-next {
+    right: 44%;
+  }
+
+  body .home_slider .swiper-button-prev {
+    left: 44%;
+  }
+}
+
+@media (max-width:767) {
+  body .home_slider .swiper-button-next {
+    right: 38%;
+    bottom: 0.5rem;
+  }
+
+  body .home_slider .swiper-button-prev {
+    left: 38%;
+    bottom: 0.5rem;
+  }
+
+  .arrow_circle .swiper-button-next,
+  .arrow_circle .swiper-button-prev {
+    background: #2AA2DE;
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow_circle .swiper-button-next svg,
+  .arrow_circle .swiper-button-prev svg {
+    color: #fff;
+    width: 11px;
+  }
+}
+
+
+.beliefs-swiper .swiper-wrapper {
+  padding-bottom: 30px !important;
+}

@@ -4,12 +4,18 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/f
 import { MdLocationOn } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
-
-
 import Link from "next/link";
 import logo from "@/app/images/logo.webp"
 import Image from "next/image";
+
+import flipcart from "@/app/images/flipkart-logo.svg"
+import amazon from "@/app/images/amazon-logo.svg"
+import mg from "@/app/images/1mg_logo_header.svg"
+import max1 from "@/app/images/Max-Pharmacy-logo.png"
+import { AiOutlineMail } from "react-icons/ai";
+
+
+
 
 const Footer = () => {
 
@@ -49,7 +55,7 @@ const Footer = () => {
         { icon: <FaInstagram />, url: "https://instagram.com" },
     ];
 
-    const description = "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development."
+    const description = "VMG Active, a division of VMG Pharmaceuticals Pvt. Ltd."
 
     const disclaimer = 'Disclaimer: "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."'
 
@@ -121,11 +127,25 @@ const Footer = () => {
             </div>
         </footer> */}
 
+            <section className="top-footer w-full bg-[#a4c75a] py-4 md:py-5">
+                <div className="max-w-7xl mx-auto justify-center px-6 flex xl:flex-nowrap flex-wrap gap-6 md:gap-10">
+                    <main>
+                        <h3 className="text-white  mb-3 text-lg md:text-xl font-medium text-center">Also Available On</h3>
+                        <div className="flex gap-4 md:gap-6 justify-center items-center">
+                            <Image src={flipcart} alt="flipcart" className="w-9 object-contain" />
+                            <Image src={amazon} alt="amazon" className="w-11 object-contain" />
+                            <Image src={mg} alt="1mg" className="w-28 object-contain" />
+                            <Image src={max1} alt="1mg" className="w-36 object-contain" />
+                        </div>
+                    </main>
+                </div>
+            </section>
+
             <footer className="w-full bg-white py-10 md:py-14">
                 <div className="max-w-7xl mx-auto px-6 flex xl:flex-nowrap flex-wrap gap-6 md:gap-10 text-sm">
 
                     {/* LOGO + DESCRIPTION */}
-                    <div className="md:w-[25%]">
+                    <div className="md:min-w-[20%]">
                         <Image
                             src={logo}
                             alt="VMG Logo"
@@ -136,9 +156,10 @@ const Footer = () => {
                         <p className="text-black mt-4">
                             {description}
                         </p>
+
                     </div>
 
-                    <div className="  md:w-[20%] flex gap-4 md:gap-10">
+                    <div className="md:min-w-[20%] flex gap-4 md:gap-10">
                         <div className="min-w-[65%] md:min-w-auto">
                             <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">SHOP</h3>
                             <ul className="space-y-2 md:space-y-3 text-gray-600">
@@ -166,7 +187,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="flex gap-5  md:gap-10 md:w-[35%]">
+                    <div className="flex gap-5  md:gap-10 md:min-w-[35%]">
                         <div className="min-w-[40%]  md:min-w-[40%]">
                             <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">SUPPORT</h3>
                             <ul className="space-y-2 md:space-y-3 text-gray-600">
@@ -193,9 +214,22 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="">
+                        <main>
+                            <h3 className="font-semibold mb-2 md:mb-2 text-[#0E0F1D] text-sm">VMGACTIVE YOUR INBOX</h3>
+                            <p className="text-black text-[13px] mb-4">
+                                Your wellbeing check with specially curated tips, recipes and lifestyle support.
 
-                        <h3 className="font-semibold mb-3 md:mb-6 text-[#0E0F1D]">SOCIAL MEDIA</h3>
+
+                            </p>
+                            <div className="flex items-center gap-4 text-[#5B8109] text-lg">
+                                <form className="flex justify-between gap-2 items-center border-b-2 w-full">
+                                    <input className="outline-0 text-sm text-black" type="email" placeholder="Enter your email" />
+                                    <button type="submit" className="text-2xl cursor-pointer"><AiOutlineMail /></button>
+                                </form>
+                            </div>
+                        </main>
+                        <h3 className="font-semibold mb-3 mt-6 md:mb-4 text-[#0E0F1D]">SOCIAL MEDIA</h3>
                         <div className="flex items-center gap-4 text-[#5B8109] text-lg">
                             {socialLinks.map((item, i) => (
                                 <Link key={i} href={item.url} target="_blank" className="hover:scale-110 transition">

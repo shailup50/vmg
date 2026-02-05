@@ -13,6 +13,15 @@ import icon4 from "@/app/images/about/icon4.svg"
 import icon5 from "@/app/images/about/icon5.svg"
 import icon6 from "@/app/images/about/icon6.svg"
 
+// add
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import icon7 from "@/app/images/about/icon7.svg"
+import icon8 from "@/app/images/about/icon8.svg"
+
+
 
 
 
@@ -244,6 +253,16 @@ export const Beliefs = () => {
             icon: icon6,
             title: "Sustainability Matters",
             text: "Responsibly sourced, eco-conscious nutrition that's good for you and the planet."
+        },
+        {
+            icon: icon7,
+            title: "Science-Backed Formulations",
+            text: "Ingredients chosen based on validated research and proven outcomes."
+        },
+        {
+            icon: icon8,
+            title: "Decades of Expertise",
+            text: "100+ years of combined experience across formulation, manufacturing, and quality science."
         }
     ];
 
@@ -273,8 +292,8 @@ export const Beliefs = () => {
                     </span>
                 </motion.h2>
 
-                <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-start justify-between gap-10">
-                    {beliefs.map((item, index) => (
+                <div className="mt-12 md:mt-16 flex1 flex-col md:flex-row1 items-start justify-between gap-10 ">
+                    {/* {beliefs.map((item, index) => (
                         <motion.div
                             key={index}
                             className="group w-full md:w-1/3 cursor-pointer transition-all flex gap-4 items-start"
@@ -297,7 +316,62 @@ export const Beliefs = () => {
                                 <p className="text-black text-sm mt-1 leading-relaxed">{item.text}</p>
                             </div>
                         </motion.div>
-                    ))}
+                    ))} */}
+                    <Swiper
+                        modules={[Autoplay, Pagination]}
+                        autoplay={{
+                            delay: 8000,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        loop={true}
+                        spaceBetween={24}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            },
+                        }}
+                        className="beliefs-swiper"
+                    >
+                        {beliefs.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <motion.div
+                                    className="group w-full cursor-pointer transition-all flex gap-4 items-start py-2"
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    // transition={{ duration: 0.1, delay: index * 0.2 }}
+                                    viewport={{ once: false }}
+                                >
+                                    <div className="mx-auto min-w-20 min-h-20 rounded-full bg-[#A4C75A] flex items-center justify-center transition-all duration-300 group-hover:bg-[#93c059] group-hover:scale-105">
+                                        <Image
+                                            src={item.icon}
+                                            alt={item.title}
+                                            width={50}
+                                            height={50}
+                                            className="transition-transform duration-300 group-hover:scale-110"
+                                        />
+                                    </div>
+
+                                    <div className="text-left">
+                                        <h3 className="font-medium text-[15px] md:text-base">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-black text-sm mt-1 leading-relaxed">
+                                            {item.text}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </section>
         </>

@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import React from 'react'
+import { React, useState } from 'react'
 import { motion } from "framer-motion";
 import greenBg from "@/app/images/about/green-bg.webp"
 import logo1 from "@/app/images/about/logo1.webp"
@@ -8,6 +8,7 @@ import logo2 from "@/app/images/about/logo2.webp"
 import logo3 from "@/app/images/about/logo3.webp"
 import contact_bg from '@/app/images/about/closeup.webp'
 import AnimatedButton from '../AnimatedButton'
+import SubscribeModal from './SubscribeModal';
 
 
 export const Promise = () => {
@@ -18,6 +19,8 @@ export const Promise = () => {
     const bannerText1 = "This is not just"
     const bannerHeading = "SUPPLEMENTATION,"
     const bannerText2 = "it’s preventive care in its most advanced form"
+
+
 
     return (
         <>
@@ -219,6 +222,7 @@ export const Safety = () => {
 
 
 export const Join = () => {
+    const [open, setOpen] = useState(false);
     return (
         <section
             className="md:py-32 py-16"
@@ -263,9 +267,15 @@ export const Join = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         viewport={{ once: false }}
                     >
-                        <AnimatedButton text="Subscribe for wellness Tips" href="#" />
+                        {/* <AnimatedButton text="Subscribe for wellness Tips" href="#" /> */}
+                        <div onClick={() => setOpen(true)}>
+                            <AnimatedButton text="Subscribe for Wellness Tips" />
+                        </div>
+
                     </motion.div>
                 </motion.div>
+                <SubscribeModal isOpen={open} onClose={() => setOpen(false)} />
+
             </div>
         </section>
     )
