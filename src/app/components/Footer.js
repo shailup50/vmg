@@ -157,13 +157,13 @@ const Footer = () => {
                             {description}
                         </p>
                         {/* <h3 className="font-semibold mb-3 mt-6 md:mb-4 text-[#0E0F1D]">SOCIAL MEDIA</h3> */}
-                        <div className="flex items-center gap-4 text-[#5B8109] text-lg mt-4">
+                        {/* <div className="flex items-center gap-4 text-[#5B8109] text-lg mt-4">
                             {socialLinks.map((item, i) => (
                                 <Link key={i} href={item.url} target="_blank" className="hover:scale-110 transition">
                                     {item.icon}
                                 </Link>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="md:min-w-[20%] flex gap-4 md:gap-10">
@@ -222,7 +222,7 @@ const Footer = () => {
                     </div>
 
                     <div className="">
-                        <main>
+                        {/* <main>
                             <h3 className="font-semibold mb-2 md:mb-2 text-[#0E0F1D] text-sm">SUPPORT YOUR INBOX</h3>
                             <p className="text-black text-[13px] mb-4">
                                 Your wellbeing check with specially curated tips, recipes and lifestyle support.
@@ -235,15 +235,15 @@ const Footer = () => {
                                     <button type="submit" className="text-2xl cursor-pointer"><AiOutlineMail /></button>
                                 </form>
                             </div>
-                        </main>
-                        {/* <h3 className="font-semibold mb-3 mt-6 md:mb-4 text-[#0E0F1D]">SOCIAL MEDIA</h3>
+                        </main> */}
+                        <h3 className="font-semibold mb-3 mt-6 md:mb-4 text-[#0E0F1D]">SOCIAL MEDIA</h3>
                         <div className="flex items-center gap-4 text-[#5B8109] text-lg">
                             {socialLinks.map((item, i) => (
                                 <Link key={i} href={item.url} target="_blank" className="hover:scale-110 transition">
                                     {item.icon}
                                 </Link>
                             ))}
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </footer>

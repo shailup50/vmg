@@ -26,6 +26,8 @@ import Faqs from "./components/Faqs";
 import bottomImg from "@/app/images/home/bottom.webp"
 import BestSellerSlider from "./components/home/BestSellerSlider";
 import { bestSellerData } from "./data/bestSellerData";
+import NewsletterSection from "./components/home/NewsletterSection";
+import newsletter from "@/app/images/home/newsletter.webp"
 
 
 
@@ -46,7 +48,7 @@ export default function Home() {
     {
       icon: icon3,
       title: "Your Partner in Health",
-      content: "We’re here to help you live a life of vigour and vitality.",
+      content: "We’re here to help you live a life of vigour and vitality with the best nutrition supplements in India.      ",
     },
   ];
 
@@ -149,8 +151,8 @@ export default function Home() {
     <>
       <HomeSlider />
       <ApproachSection
-        heading="Our Approach"
-        description="Rooted in Wellness. VMG Active is a new venture born from VMG Pharmaceuticals Pvt Ltd legacy of trust and quality. We believe that true health is about more than just medicine—it’s about proactive, daily nutrition. Our nutraceuticals are designed to enhance your well-being, naturally."
+        heading="VMG Active – Your Trusted Choice for the Best Nutrition Supplements in India"
+        description="Rooted in Wellness. VMG Active is a new venture born from VMG Pharmaceuticals Pvt Ltd’s legacy of trust and quality. We believe that true health is about more than just medicine; it’s about proactive, daily nutrition. We produce the best nutrition supplements in India, which are designed to enhance your well-being, naturally.        "
         subHeading="Our Commitment to You"
         commitments={commitments}
         imageSrc={apporchimg}
@@ -162,7 +164,7 @@ export default function Home() {
       <section className="bg-[#F2F5EC] py-6 md:py-8 overflow-hidden ">
         <div className="max-w-7xl  mx-auto px-5 2xl:px-0 ">
           <motion.h2
-            className="text-lg md:text-xl text-center my-3 font-semibold"
+            className="  text-center my-3  text-2xl md:text-3xl  font-medium"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -223,20 +225,29 @@ export default function Home() {
       /> */}
       <BestSellerSlider data={bestSellerData} />
 
-      <Newsletter
+      {/* <Newsletter
         title="Get Your Daily Dose of Wellness"
         subtitle="Stay informed about new products, exclusive offers, and expert health tips"
         placeholder="Enter Your Email"
         buttonText="Subscribe"
         backgroundImage={bgForm}
+      /> */}
+      <NewsletterSection
+        title="Get Your Dose of Wellness"
+        description="Stay informed about new products, exclusive offers, and expert health tips"
+        placeholder="Enter your email address"
+        buttonText="Subscribe"
+        bgImage={newsletter}
       />
 
       <Testimonials testimonials={testimonials} />
       <BlogSlider blogs={blogs} />
-      <Faqs faqData={faqData} />
-      <section>
-        <Image src={bottomImg} className="w-full h-full" alt="img" width={1200} />
+      <section className="bg-[#F2F5EC]">
+        <Faqs faqData={faqData} />
       </section>
+      {/* <section>
+        <Image src={bottomImg} className="w-full h-full" alt="img" width={1200} />
+      </section> */}
     </>
   );
 }

@@ -42,7 +42,7 @@ const TrendingSearches = ({ items, heading }) => {
                 <motion.div
                     key={index}
                     variants={itemVariants}
-                    className={`px-6 py-3 md:text-base text-[15px] rounded-full text-center w-[45%] md:w-[200px] lg:shrink-0 lg:w-[18%] border cursor-pointer transition-all hover:bg-[#97D2F3] hover:border-[#97D2F3] ${index === 20 ? "bg-[#97D2F3] text-black" : "bg-white text-black"
+                    className={`px-6 py-3 md:text-base text-[15px] rounded-full text-center w-[45%] md:w-[200px] lg:shrink-0 lg:w-[18%] border border-[#5B8109] cursor-pointer transition-all hover:text-black hover:bg-[#97D2F3] hover:border-[#97D2F3] ${index === 20 ? "bg-[#97D2F3] text-black" : "bg-white text-[#5A5A5A]"
                         }`}
                 >
                     {item}

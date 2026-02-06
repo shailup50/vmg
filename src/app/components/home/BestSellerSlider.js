@@ -51,8 +51,8 @@ export default function BestSellerSlider({ data }) {
 
     return (
         <>
-            <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-6 md:py-10 md:pt-14">
-                <h2 className="text-[#324904] text-2xl md:text-3xl font-semibold mb-8 text-center">Shop Our Best Sellers</h2>
+            <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-6 md:py-10 md:pt-14 mb-4">
+                <h2 className="text-[#324904] text-2xl md:text-3xl font-medium mb-8 text-center">Shop Our Best Sellers</h2>
                 <Swiper
                     modules={[Navigation]}
                     navigation

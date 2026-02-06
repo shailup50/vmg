@@ -10,11 +10,11 @@ const CommitmentItem = ({ icon, title, content }) => {
             </div>
             <div>
                 <h4
-                    className="font-semibold text-black text-[15px] md:text-base"
+                    className="font-semibold text-black md:text-[15px] "
                     dangerouslySetInnerHTML={{ __html: title }}
                 />
                 <p
-                    className="text-black text-[15px] md:text-base "
+                    className=" text-[15px] text-[#505050]"
                     dangerouslySetInnerHTML={{ __html: content }}
                 />
             </div>
@@ -46,15 +46,15 @@ const ApproachSection = ({
                 className="md:w-1/2 md:order-0 order-2"
             >
                 <h2
-                    className="text-[#4B6F00] text-2xl md:text-3xl font-semibold mb-4"
+                    className="text-black text-2xl md:text-3xl font-medium mb-4"
                     dangerouslySetInnerHTML={{ __html: heading }}
                 />
                 <p
-                    className="text-black mb-6 leading-relaxed text-[15px] md:text-base"
+                    className="text-[#505050] mb-6 leading-relaxed  text-[15px]"
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
                 <h3
-                    className="font-semibold text-lg text-black mb-4 md:mb-6"
+                    className="font-medium text-lg text-black mb-4 md:mb-6"
                     dangerouslySetInnerHTML={{ __html: subHeading }}
                 />
 
@@ -64,6 +64,7 @@ const ApproachSection = ({
                     whileInView="show"
                     transition={{ staggerChildren: 0.15 }}
                     viewport={{ once: false }}
+
                 >
                     {commitments?.map((item, index) => (
                         <motion.div
@@ -92,7 +93,7 @@ const ApproachSection = ({
                     alt="Our Approach Image"
                     width={800}
                     height={400}
-                    className="shadow-sm w-full min-w-full"
+                    className="shadow-sm w-full min-w-full rounded-lg"
                 />
             </motion.div>
         </motion.div>

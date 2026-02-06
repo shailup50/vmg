@@ -15,7 +15,7 @@ export default function Testimonials({
 
 
     return (
-        <section className="bg-[#EFF9FF] py-10 md:py-20">
+        <section className="bg-[#EFF9FF] py-8 md:py-12">
             <motion.div
                 className="mx-auto px-6 text-center"
                 initial={{ opacity: 0, y: 40 }}
@@ -25,7 +25,7 @@ export default function Testimonials({
             >
                 {/* Heading */}
                 <motion.h2
-                    className="text-black text-2xl md:text-3xl font-semibold mb-4"
+                    className="text-black text-2xl md:text-3xl font-medium mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -58,8 +58,8 @@ export default function Testimonials({
                         }}
                         pagination={{ clickable: false }}
                         breakpoints={{
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3, spaceBetween: 0 },
+                            768: { slidesPerView: 2, spaceBetween: 40 },
+                            1024: { slidesPerView: 3, spaceBetween: 70 },
                         }}
                         className="slider_3d black_arrow outer_arrow py-10! md:py-20! px-0!"
                     >

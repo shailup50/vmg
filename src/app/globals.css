@@ -106,6 +106,7 @@ body .outer_arrow {
     margin-top: -6px;
     transform: scale(1.2) !important;
     z-index: 99;
+    border-radius: 15px;
   }
 }
 
