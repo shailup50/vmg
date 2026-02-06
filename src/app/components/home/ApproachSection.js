@@ -35,7 +35,7 @@ const ApproachSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: false }}
-            className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-5 2xl:px-0 py-6 md:py-10 gap-8"
+            className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-5 2xl:px-0 py-6 pt-10 md:pt-14 md:py-10 gap-8"
         >
 
             <motion.div
