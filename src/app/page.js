@@ -214,13 +214,13 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
-      <Future
+      {/* <Future
         heading="The Future of Wellness, Coming Soon"
         description="Our product line will grow to include new, innovative formulas in the coming months. We are actively developing solutions for Cognitive Health, Stress Management, Immunity Boosters, etc., and we can't wait to share them with you"
         btnName="Stay tuned for our next launch!"
         btnLink="#"
         img={bgimg}
-      />
+      /> */}
       <BestSellerSlider data={bestSellerData} />
 
       <Newsletter
