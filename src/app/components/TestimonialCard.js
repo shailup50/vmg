@@ -17,7 +17,7 @@ export default function TestimonialCard({ name, description, image }) {
                         width={100}
                         height={100}
                     />
-                    <h3 className=" text-sm text-gray-900 uppercase tracking-wide">
+                    <h3 className="text-sm text-gray-900 uppercase font-normal! tracking-wide">
                         {name}
                     </h3>
                 </div>

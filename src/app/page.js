@@ -28,6 +28,7 @@ import BestSellerSlider from "./components/home/BestSellerSlider";
 import { bestSellerData } from "./data/bestSellerData";
 import NewsletterSection from "./components/home/NewsletterSection";
 import newsletter from "@/app/images/home/newsletter.webp"
+import SpinWheelPopup from "./components/home/SpinWheelPopup";
 
 
 
@@ -248,6 +249,7 @@ export default function Home() {
       {/* <section>
         <Image src={bottomImg} className="w-full h-full" alt="img" width={1200} />
       </section> */}
+      <SpinWheelPopup />
     </>
   );
 }
