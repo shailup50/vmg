@@ -190,8 +190,8 @@ export default function SpinWheelPopup() {
                             </div>
 
                             {/* RIGHT - FORM SECTION */}
-                            <div className="w-full md:w-1/2 p-6 md:p-12 md:ps-0 flex flex-col justify-center text-center md:text-left z-20">
-                                <h2 className="text-5xl md:text-7xl font-semibold text-white mb-4 leading-tight">
+                            <div className="w-full md:w-1/2 p-6 md:p-12 md:pt-12 pt-4 md:ps-0 flex flex-col justify-center text-center md:text-left z-20">
+                                <h2 className="text-5xl md:text-7xl font-semibold text-white mb-2 md:mb-4 leading-tight">
                                     Welcome <span className="text-3xl md:text-5xl font-normal block">to VMG Active</span>
                                 </h2>
                                 <p className="text-white text-center text-[15px] md:text-lg mb-8 font-light">
