@@ -27,6 +27,7 @@ export default function SpinWheelPopup() {
     const [open, setOpen] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
     const [rotation, setRotation] = useState(0);
     const [spinning, setSpinning] = useState(false);
     const [result, setResult] = useState(null);
@@ -40,7 +41,7 @@ export default function SpinWheelPopup() {
     }, []);
 
     const spinWheel = () => {
-        if (spinning || !name || !email) return;
+        if (spinning || !name || !email || !phone) return;
 
         const index = Math.floor(Math.random() * SEGMENTS.length);
 
@@ -220,13 +221,24 @@ export default function SpinWheelPopup() {
                                             font-light
                                             placeholder:text-[#B6B6B6]"
                                         />
+                                        <input
+                                            type="tel"
+                                            placeholder="Enter Your Phone Number"
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
+                                            className="w-full px-5 py-3 md:py-4 rounded-lg border-none outline-none text-black text-sm md:text-base shadow-inner
+                                            bg-white
+                                            font-light
+                                            placeholder:text-[#B6B6B6]"
+                                        />
+
 
 
 
 
                                         <button
                                             onClick={spinWheel}
-                                            disabled={!name || !email}
+                                            disabled={!name || !email || !phone}
                                             className="w-full bg-black hover:bg-[#1d2939] text-white font-normal py-3 md:py-4 rounded-lg transition-colors shadow-lg mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
                                             Try Your Luck
