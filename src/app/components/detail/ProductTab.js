@@ -34,14 +34,14 @@ export default function ProductTab() {
     };
 
     return (
-        <div className="w-full border-b border-gray-300 mb-6">
-            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 px-2 md:px-0">
+        <div className="w-full border-b border-gray-300 mb-0 ">
+            <ul className="flex flex-wrap items-center gap-x-1 md:gap-x-4 gap-y-2 px-2 md:px-0">
                 {tabs.map((tab, index) => (
                     <li key={index} className="relative">
                         <Link
                             href={tab.href}
                             onClick={() => handleScroll(tab.id, tab.name)}
-                            className={`block px-1 py-2 text-sm md:text-[15px] transition-all duration-300
+                            className={`block px-1 py-2 text-[13px] md:text-[15px] transition-all duration-300
                 ${active === tab.name
                                     ? "text-black font-medium"
                                     : "text-gray-600 hover:text-black"

@@ -46,7 +46,7 @@ export default function ProductDetail({ product }) {
     const decrease = () => quantity > 1 && setQuantity(quantity - 1);
 
     return (
-        <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10 scroll-mt-[100px]" id="description">
 
             {/* LEFT - IMAGE GALLERY */}
             <div>
@@ -108,8 +108,8 @@ export default function ProductDetail({ product }) {
 
                 <h1 className="text-2xl md:text-3xl leading-snug font-semibold text-black mt-4">{product.title}</h1>
 
-                <ProductTab />
-                <section className="description-sec scroll-mt-[100px]" id="description">
+                {/* <ProductTab /> */}
+                <section className="description-sec " >
 
                     <h3 className="text-base md:text-[17px] text-black font-medium">{product.descriptionTitle}</h3>
 
