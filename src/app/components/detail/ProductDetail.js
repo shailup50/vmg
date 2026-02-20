@@ -18,6 +18,7 @@ import flipcart from "@/app/images/flipkart-logo.svg"
 import amazon from "@/app/images/amazon-logo.svg"
 import mg from "@/app/images/1mg-logo.svg"
 import Link from "next/link";
+import ProductTab from "./ProductTab";
 
 
 
@@ -106,9 +107,14 @@ export default function ProductDetail({ product }) {
                 </span>
 
                 <h1 className="text-2xl md:text-3xl leading-snug font-semibold text-black mt-4">{product.title}</h1>
-                <h3 className="text-base md:text-[17px] text-black font-medium">{product.descriptionTitle}</h3>
 
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line -mt-2 text-[15px]" dangerouslySetInnerHTML={{ __html: product.description }} />
+                <ProductTab />
+                <section className="description-sec scroll-mt-[100px]" id="description">
+
+                    <h3 className="text-base md:text-[17px] text-black font-medium">{product.descriptionTitle}</h3>
+
+                    <p className="text-gray-600 leading-relaxed whitespace-pre-line -mt-2 text-[15px]" dangerouslySetInnerHTML={{ __html: product.description }} />
+                </section>
 
                 {/* <h3 className="text-black mt-6 mb-3 text-base font-medium">Also Available on</h3>
                 <div className="flex gap-4 mb-8 items-center">

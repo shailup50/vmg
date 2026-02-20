@@ -11,7 +11,7 @@ export default function IngredientsSection({
     if (!ingredients?.length) return null; // hide section if no data
 
     return (
-        <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-10 md:py-14">
+        <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-10 md:py-14 scroll-mt-[70px]" id="ingredients">
 
             <h2 className="text-2xl md:text-3xl font-medium text-center mb-10">
                 {title}

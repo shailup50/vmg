@@ -6,7 +6,7 @@ export default function HowToUse({ title = "How to Use", steps = [], image }) {
     if (!steps || steps.length === 0) return null;
 
     return (
-        <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-14">
+        <section className="max-w-7xl mx-auto px-5 2xl:px-0 py-14 scroll-mt-[70px]" id="how-to-take">
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20">
                 <h2 className="text-2xl md:text-3xl font-medium mb-0 md:mb-6 md:text-left text-center md:mt-0 -mt-4 md:hidden block">{title}</h2>

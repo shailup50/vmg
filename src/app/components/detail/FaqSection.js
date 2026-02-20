@@ -12,7 +12,7 @@ export default function FaqSection({ title = "FAQs", data = [] }) {
     };
 
     return (
-        <section className="max-w-6xl mx-auto px-5 py-10 md:py-16">
+        <section className="max-w-6xl mx-auto px-5 py-10 md:py-16 scroll-mt-[70px]" id="faq">
             <h2 className="text-3xl md:text-4xl font-medium mb-6 md:text-left text-center md:mb-10">{title}</h2>
 
             <div className="space-y-2">
