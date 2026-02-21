@@ -4,6 +4,7 @@ import { Feature, Ingredients, Review } from '../components/detail/FeatureIngred
 import CertificateSection from '../components/detail/CertificateSection'
 import MoreInfo from '../components/detail/MoreInfo'
 import ProductTab from '../components/detail/ProductTab'
+import { ProductInfoCommon } from '../components/detail/ProductInfoCommon'
 
 function page() {
     return (
@@ -14,6 +15,7 @@ function page() {
                 </section>
             </div>
             <Info />
+            <ProductInfoCommon />
             <Benefit />
             <Faq />
             <Feature />

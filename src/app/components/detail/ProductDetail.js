@@ -243,7 +243,7 @@ export default function ProductDetail({ product }) {
                     </div>
                 </div>
 
-                <p className="text-[#939393] text-sm text-center">Free shipping in the INDIA</p>
+                <p className="text-[#939393] text-sm text-center">Free shipping in INDIA</p>
             </div>
         </section>
     );
