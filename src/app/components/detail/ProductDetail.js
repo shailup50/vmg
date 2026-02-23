@@ -83,16 +83,16 @@ export default function ProductDetail({ product }) {
                     ))}
                 </Swiper>
                 <div>
-                    <div className="grid grid-cols-3 md:grid-cols-3 items-start gap-6 md:gap-10 mt-8 md:mt-12">
+                    <div className="grid grid-cols-3 md:grid-cols-3 items-start gap-3 md:gap-4 mt-8 md:mt-12">
                         {product.benefits?.map((f, i) => (
                             <div
                                 key={i}
                                 className="text-center flex flex-col items-center text-sm text-gray-700"
                             >
                                 <div className="mb-2">
-                                    <Image src={f.icon} width={80} height={80} alt={f.name} className="md:h-16 h-10" />
+                                    <Image src={f.icon} width={80} height={80} alt={f.name} className="md:h-14 h-8" />
                                 </div>
-                                <p className="mt-1 text-black text-[13px] md:text-[15px] font-medium">{f.name}</p>
+                                <p className="mt-1 text-black text-xs md:text-sm font-medium">{f.name}</p>
                             </div>
                         ))}
                     </div>
