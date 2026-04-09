@@ -16,13 +16,13 @@ function page() {
                 </section>
             </div>
             <Info />
-            <DetailImage />
+            {/* <DetailImage /> */}
 
-            {/* <ProductInfoCommon /> */}
-            {/* <Benefit /> */}
-            {/* <Faq /> */}
-            {/* <Feature /> */}
-            {/* <Ingredients /> */}
+            <ProductInfoCommon />
+            <Benefit />
+            <Faq />
+            <Feature />
+            <Ingredients />
             <CertificateSection />
             <MoreInfo />
             <Review />
