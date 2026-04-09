@@ -5,6 +5,7 @@ import CertificateSection from '../components/detail/CertificateSection'
 import MoreInfo from '../components/detail/MoreInfo'
 import ProductTab from '../components/detail/ProductTab'
 import { ProductInfoCommon } from '../components/detail/ProductInfoCommon'
+import { DetailImage } from '../components/detail/DetailImage'
 
 function page() {
     return (
@@ -15,11 +16,13 @@ function page() {
                 </section>
             </div>
             <Info />
-            <ProductInfoCommon />
-            <Benefit />
-            <Faq />
-            <Feature />
-            <Ingredients />
+            <DetailImage />
+
+            {/* <ProductInfoCommon /> */}
+            {/* <Benefit /> */}
+            {/* <Faq /> */}
+            {/* <Feature /> */}
+            {/* <Ingredients /> */}
             <CertificateSection />
             <MoreInfo />
             <Review />

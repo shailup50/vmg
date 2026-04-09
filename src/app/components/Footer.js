@@ -156,6 +156,17 @@ const Footer = () => {
                         <p className="text-black mt-4">
                             {description}
                         </p>
+
+                        <Image
+                            src="https://www.api.vmgactive.com/wp-content/uploads/2026/03/fssai.svg"
+                            alt="VMG Logo"
+                            width={90}
+                            height={50}
+                            className="object-contain mt-md-3 mt-2 -ms-1"
+                        />
+                        <p className="text-black mt-2">
+                            Lic. No.: 10825999000187
+                        </p>
                         {/* <h3 className="font-semibold mb-3 mt-6 md:mb-4 text-[#0E0F1D]">SOCIAL MEDIA</h3> */}
                         {/* <div className="flex items-center gap-4 text-[#5B8109] text-lg mt-4">
                             {socialLinks.map((item, i) => (
