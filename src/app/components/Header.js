@@ -13,6 +13,7 @@ const menuItems = [
     { name: "Our Story", url: "/our-story" },
     { name: "Why VMG", url: "/why-vmg" },
     { name: "Blogs", url: "/blogs" },
+    { name: "Media", url: "/media" },
     { name: "Contact us", url: "/contact" },
 ];
 

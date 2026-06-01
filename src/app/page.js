@@ -29,6 +29,7 @@ import { bestSellerData } from "./data/bestSellerData";
 import NewsletterSection from "./components/home/NewsletterSection";
 import newsletter from "@/app/images/home/newsletter.webp"
 import SpinWheelPopup from "./components/home/SpinWheelPopup";
+import { NewsLogo } from "./components/home/NewsLogo";
 
 
 
@@ -243,6 +244,7 @@ export default function Home() {
 
       <Testimonials testimonials={testimonials} />
       <BlogSlider blogs={blogs} />
+      <NewsLogo />
       <section className="bg-[#F2F5EC]">
         <Faqs faqData={faqData} />
       </section>

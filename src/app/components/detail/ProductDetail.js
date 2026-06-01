@@ -97,6 +97,7 @@ export default function ProductDetail({ product }) {
                         ))}
                     </div>
                 </div>
+
             </div>
 
             {/* RIGHT - DETAILS */}

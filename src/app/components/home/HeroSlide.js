@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AnimatedButton from "../AnimatedButton";
+import Link from "next/link";
 
 export default function HeroSlide({
     imageSrc,
@@ -94,9 +95,13 @@ export default function HeroSlide({
                     >
                         {buttonText}
                     </motion.button> */}
+
                     <AnimatedButton text={text} href={href} />
                 </div>
             </motion.div>
+            {/* <Link href="#" className="bg-[#5B8109] rounded-full hover:bg-[#4B6F00] lg:text-base text-[15px] py-3 px-7 lg:px-12 text-white mt-3 absolute top-[90%] bottom-0 left-2/4 -translate-2/4">
+                baby
+            </Link> */}
         </motion.div>
     );
 }
