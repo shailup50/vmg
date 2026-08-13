@@ -4,6 +4,7 @@ import banner from '@/app/images/blog/blog-banner.webp'
 import Link from 'next/link'
 import BlogCard from '../components/blog/BlogCard';
 import NewsList from '../components/blog/NewsList';
+import BlogImageSlider from '../components/blog/BlogImageSlider';
 
 function page() {
     const blogs = [
@@ -64,17 +65,44 @@ function page() {
 
         },
     ];
+    const blogSliderData = [
+        {
+            image: banner,
+            title: "The Power of Daily Nutrition: Small Habits That Create Big Health Changes",
+            meta: "4 Min â€¢ August 19, 2025",
+            link: "/blog-detail",
+        },
+        {
+            image: banner,
+            title: "Inside the Capsule: What Makes VMG Active Supplements Different",
+            meta: "4 Min â€¢ August 19, 2025",
+            link: "/blog-detail",
+        },
+        {
+            image: banner,
+            title: "Is Your Multivitamin Really Working for You?",
+            meta: "4 Min â€¢ August 19, 2025",
+            link: "/blog-detail",
+        },
+    ];
     return (
         <>
             <section className='bg-[#F9FFEB] py-8 md:py-12'>
                 <div className='max-w-7xl mx-auto  px-4 md:px-5 lg:px-0'>
+
+                    {/* make blog img slider using swiper with blog-detail-link also in mobile version */}
+                    <BlogImageSlider slides={blogSliderData} aspectClass="aspect-[16/8]" />
+
+                    {/* end code here  */}
+
+
                     <h2 className='text-[#121212] text-center text-2xl md:text-3xl font-semibold mb-4'>Latest Blog</h2>
 
                     <p className='text-black text-[15px] md:text-base mt-1 mb-10 text-center'>“Insights, Ideas, and Inspiration for Every Reader”</p>
 
                     <div className='main_card'>
                         <Image src={banner} alt='Latest Blog' />
-                        <Link href="#" className='text-lg font-medium md:text-xl mt-6 inline-block  text-[#121212] hover:text-[#4B6F00] transition'>
+                        <Link href="/blog-detail" className='text-lg font-medium md:text-xl mt-6 inline-block  text-[#121212] hover:text-[#4B6F00] transition'>
                             <h2>The Power of Daily Nutrition: Small Habits That Create Big Health Changes</h2>
                         </Link>
                         <p className="text-[#717171] text-sm mt-2">

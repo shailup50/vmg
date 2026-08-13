@@ -100,6 +100,28 @@ body .outer_arrow {
   display: none !important;
 }
 
+.blog-image-slider .swiper-wrapper {
+  padding-bottom: 34px;
+}
+
+.blog-image-slider .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.blog-image-slider .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #9caf58;
+  opacity: 0.45;
+}
+
+.blog-image-slider .swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 999px;
+  background: #4B6F00;
+  opacity: 1;
+}
+
 @media (min-width:1024px) {
   .slider_3d .swiper-slide-next {
     box-shadow: 0px 4px 20px 0px #00000033;
