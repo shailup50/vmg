@@ -190,10 +190,10 @@ export default function Header() {
                     <div className="max-w-7xl mx-auto text-center text-white px-5 2xl:px-0">
                         <h2 className="text-2xl lg:text-3xl font-semibold">Final Hour 60% Off + Extra 5% Off! Until August 19th 12:20 PM
                         </h2>
-                        <p className="text-lg font-medium flex justify-center gap-2 items-center"><FaCircle className="text-[6px]" /> 5000+ sold in July | Made in India </p>
-                        <p className="text-lg font-medium mb-0 flex justify-center gap-2 items-center"><FaCircle className="text-[6px]" />
+                        <p className="text-lg font-medium flex justify-center gap-2 items-center">5000+ sold in July | Made in India | Lab Tested | FSSAI Licensed </p>
+                        {/* <p className="text-lg font-medium mb-0 flex justify-center gap-2 items-center"><FaCircle className="text-[6px]" />
                             Lab Tested <FaCircle className="text-[6px]" />
-                            FSSAI Licensed</p>
+                            FSSAI Licensed</p> */}
                     </div>
                 </motion.main>
 
