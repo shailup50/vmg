@@ -19,7 +19,7 @@ const trustItems = [
     },
     {
         icon: <MdOutlineGroups />,
-        text: "Sold over 1 Lac + in 1 year counting",
+        text: "Sold over 50,000 + in 1 year counting",
     },
     {
         icon: (
@@ -35,7 +35,7 @@ const trustItems = [
 export const Trust = () => {
     return (
         <motion.section
-            className="bg-white shadow-[0_8px_18px_-14px_rgba(107,114,128,0.75)] py-0! md:py-4"
+            className="bg-[#f1fbed] shadow-[0_8px_17px_-17px_rgba(107,114,128,0.75)] py-0! md:py-4"
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
