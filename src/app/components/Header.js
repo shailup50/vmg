@@ -188,9 +188,11 @@ export default function Header() {
                     transition={{ duration: 0.2 }}
                     className="w-full bg-[#2aa2de] py-3 md:py-4 shadow-sm sticky top-0 z-50">
                     <div className="max-w-7xl mx-auto text-center text-white px-5 2xl:px-0">
-                        <h2 className="text-2xl lg:text-3xl font-semibold">Final Hour 60% Off + Extra 5% Off! Until August 19th 12:20 PM
+                        <h2 className="text-xl lg:text-3xl font-semibold">Final Hour 55% Off + Extra 5% Off! Until October 8 at 1:20 PM
                         </h2>
-                        <p className="text-lg font-medium flex justify-center gap-2 items-center">5000+ sold in July | Made in India | Lab Tested | FSSAI Licensed </p>
+                        <p className="text-[15px] md:text-lg font-normal md:font-medium flex justify-center gap-2 items-center">5000+ sold in July | Made in India | Lab Tested | FSSAI Licensed
+
+                        </p>
                         {/* <p className="text-lg font-medium mb-0 flex justify-center gap-2 items-center"><FaCircle className="text-[6px]" />
                             Lab Tested <FaCircle className="text-[6px]" />
                             FSSAI Licensed</p> */}

@@ -10,8 +10,9 @@ import { DetailImage } from '../components/detail/DetailImage'
 function page() {
     return (
         <>
-            <div className='sticky top-16 md:top-19  z-100 bg-white'>
+            <div className='sticky top-47 md:top-50  z-100 bg-white'>
                 <section className='max-w-7xl mx-auto px-2 2xl:px-0 md:mt-0 -mt-10 md:-mb-6 py-2'>
+
                     <ProductTab />
                 </section>
             </div>

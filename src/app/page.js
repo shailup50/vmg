@@ -30,6 +30,7 @@ import NewsletterSection from "./components/home/NewsletterSection";
 import newsletter from "@/app/images/home/newsletter.webp"
 import SpinWheelPopup from "./components/home/SpinWheelPopup";
 import { NewsLogo } from "./components/home/NewsLogo";
+import { Trust } from "./components/home/Trust";
 
 
 
@@ -152,6 +153,8 @@ export default function Home() {
   return (
     <>
       <HomeSlider />
+      <Trust />
+
       <ApproachSection
         heading="VMG Active – Your Trusted Choice for the Best Nutrition Supplements in India"
         description="Rooted in Wellness. VMG Active is a new venture born from VMG Pharmaceuticals Pvt Ltd’s legacy of trust and quality. We believe that true health is about more than just medicine; it’s about proactive, daily nutrition. We produce the best nutrition supplements in India, which are designed to enhance your well-being, naturally.        "

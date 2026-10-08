@@ -42,6 +42,21 @@ body .outer_arrow {
   padding-right: 0.6rem;
 }
 
+.trust-marquee {
+  animation: trust-marquee 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes trust-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 .slider_3d .swiper-wrapper {
   align-items: center;
 }
