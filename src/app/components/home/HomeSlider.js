@@ -65,10 +65,10 @@ export default function HomeSlider() {
             //     delay: 3000,
             //     disableOnInteraction: false,
             // }}
-            className="home_slider arrow_circle"
+            className="home_slider arrow_circle h-[100dvh] min-h-[480px] w-full md:h-screen md:min-h-[520px]"
         >
             {slides.map((slide, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="h-full w-full">
                     <HeroSlide {...slide} />
                 </SwiperSlide>
             ))}

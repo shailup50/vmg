@@ -14,9 +14,48 @@ import blogimg from "@/app/images/blog/blog-detail.webp"
 import BlogSlider from "../components/BlogSlider";
 import blog1 from "@/app/images/home/blog1.webp"
 
-function page() {
+const blogTitle = "Mastering ChatGPT Blog Creation: Dos and Don’ts for SaaS Marketing Managers";
+const fallbackBlogUrl = "https://www.vmgactive.com/blog/how-to-read-a-supplement-label-units-symbols-what-they-really-mean";
+
+function Page() {
     const [headings, setHeadings] = useState([]);
     const [activeId, setActiveId] = useState("");
+    const shareLinks = [
+        {
+            label: "Share on Facebook",
+            getHref: (url) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+            icon: <FaSquareFacebook />,
+            className: "text-[28px] md:text-[34px] flex items-center justify-center",
+        },
+        {
+            label: "Share on X",
+            getHref: (url) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(blogTitle)}`,
+            icon: <RiTwitterXFill />,
+            className: "bg-white text-[22px] min-w-6 min-h-[26px] md:min-w-8 md:min-h-[31px] text-[#339cd7] rounded-xs md:rounded-sm flex items-center justify-center",
+        },
+        {
+            label: "Share on LinkedIn",
+            getHref: (url) => `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+            icon: <FaLinkedin />,
+            className: "text-[28px] md:text-[34px] flex items-center justify-center",
+        },
+    ];
+
+    const renderShareButtons = () => shareLinks.map((link) => (
+        <a
+            key={link.label}
+            href={link.getHref(fallbackBlogUrl)}
+            onClick={(event) => {
+                event.currentTarget.href = link.getHref(window.location.href);
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.label}
+            className={link.className}
+        >
+            {link.icon}
+        </a>
+    ));
     /* 🔹 Get all H2 headings */
     useEffect(() => {
         const h2s = Array.from(document.querySelectorAll("article h2"));
@@ -137,16 +176,7 @@ function page() {
                                 <div className="bg-[#339CD7] mt-6 rounded-xl p-5 text-white flex gap-2 justify-between items-center">
                                     <p className="font-medium mb-0! text-[15px] md:text-base">Share with your community!</p>
                                     <div className="flex items-center gap-3">
-
-                                        <a className="text-[28px] md:text-[34px] flex items-center justify-center">
-                                            <FaSquareFacebook />
-                                        </a>
-                                        <a className=" bg-white text-[22px] min-w-6 min-h-[26px] md:min-w-8  md:min-h-[31px] text-[#339cd7] rounded-xs md:rounded-sm flex items-center justify-center">
-                                            <RiTwitterXFill />
-                                        </a>
-                                        <a className="text-[28px] md:text-[34px] flex items-center justify-center">
-                                            <FaLinkedin />
-                                        </a>
+                                        {renderShareButtons()}
                                     </div>
                                 </div>
 
@@ -159,16 +189,7 @@ function page() {
                                 <div className="bg-[#339CD7] rounded-xl p-4 md:p-5 text-white md:block flex items-center justify-between">
                                     <p className="font-medium md:mb-3 mb-0 md:text-base text-[15px]">Share with your community!</p>
                                     <div className="flex items-center gap-2 md:gap-3">
-
-                                        <a className="text-[28px] md:text-[34px] flex items-center justify-center">
-                                            <FaSquareFacebook />
-                                        </a>
-                                        <a className=" bg-white text-[22px] min-w-6 min-h-[26px] md:min-w-8  md:min-h-[31px] text-[#339cd7] rounded-xs md:rounded-sm flex items-center justify-center">
-                                            <RiTwitterXFill />
-                                        </a>
-                                        <a className="text-[28px] md:text-[34px] flex items-center justify-center">
-                                            <FaLinkedin />
-                                        </a>
+                                        {renderShareButtons()}
                                     </div>
                                 </div>
 
@@ -206,4 +227,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
